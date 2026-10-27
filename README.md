@@ -1,10 +1,24 @@
 # Ringkeeper
 
-Ringkeeper runs Claude coding agents on your own computer, against the projects
-and accounts you give them. Each project is bound to its own connections (its
-Supabase, its n8n, its Vercel team), so an agent working on one client can't
-reach another's. Writes to production wait for your approval, and everything is
-recorded in an audit log. It is MIT licensed and in beta.
+Ringkeeper lets one person run AI agents across many clients without ever
+switching connections.
+
+If you work for 100 clients, each has its own database, Airtable, Vercel, n8n
+and email. With Claude Desktop or Claude Code you reconnect your tools every
+time you switch clients. In Ringkeeper you connect each client's tools once,
+attach them to that client's projects, and forget about it.
+
+Then just ask: "Add last week's leads to Acme's Airtable." Ringkeeper figures
+out which client and project you mean, uses that project's connections, and
+picks the right model for the job.
+
+- Connect once per client, use in every project that needs it
+- Requests go to the right project automatically
+- One client's connections can never reach another client's project
+- Changes to live data wait for your approval; everything is logged
+- Runs on your own computer, with your own Claude API key
+
+Free and open source (MIT). Windows. Beta.
 
 This repository holds the installers and update files only.
 
