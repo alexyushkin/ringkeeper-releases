@@ -1,4 +1,4 @@
-# Ringkeeper
+# <img src="https://raw.githubusercontent.com/alexyushkin/ringkeeper/main/web/public/icon-192.png" alt="" width="40" align="top"> Ringkeeper
 
 Ringkeeper lets one person run AI agents across many clients without ever
 switching connections.
