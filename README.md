@@ -48,6 +48,11 @@ turned back on without reinstalling Windows.
 what you did, what happened, and your Windows version. Ringkeeper's version is
 in Settings › About.
 
+## Need help setting it up?
+
+I can help you install and connect Ringkeeper for your clients. Contact:
+<https://yushkin.us> or LinkedIn: <https://www.linkedin.com/in/alexey-yushkin>.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). The installers also contain third-party software
