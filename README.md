@@ -42,6 +42,35 @@ on), there's no "Run anyway": use a signed release once there is one.
 Turning Smart App Control off is possible in Windows Security, but it can't be
 turned back on without reinstalling Windows.
 
+## Mac (Apple Silicon), experimental
+
+**Experimental: unsigned, not yet tested on a real Mac — reports welcome.**
+Each release also has `Ringkeeper_<version>_aarch64.dmg` for Macs with Apple
+Silicon (M1 or newer). There's no build for Intel Macs.
+
+1. Download the `.dmg` from the
+   [latest release](https://github.com/alexyushkin/ringkeeper-releases/releases/latest),
+   open it, and drag **Ringkeeper** into **Applications**.
+2. Open Ringkeeper from Applications. macOS says it can't check the app for
+   malware, because it isn't signed yet. Click **Done**.
+3. Open **System Settings › Privacy & Security**, scroll down to **Security**,
+   and next to "Ringkeeper was blocked…" click **Open Anyway**. Confirm with
+   your password or Touch ID, then click **Open**. macOS remembers this, so you
+   only do it once.
+
+If macOS instead says the app "is damaged and can't be opened", that's the same
+missing signature. In Terminal, run
+`xattr -dr com.apple.quarantine /Applications/Ringkeeper.app`, then open it
+again.
+
+Your data goes in `~/Library/Application Support/Ringkeeper`, the master key in
+your Keychain, and new projects in `Documents/Ringkeeper`. Updates install from
+inside the app, as on Windows.
+
+Something not working on your Mac? Please
+[open an issue](https://github.com/alexyushkin/ringkeeper-releases/issues):
+that's how the Mac build gets tested.
+
 ## Problems
 
 [Open an issue](https://github.com/alexyushkin/ringkeeper-releases/issues) with
