@@ -42,21 +42,29 @@ on), there's no "Run anyway": use a signed release once there is one.
 Turning Smart App Control off is possible in Windows Security, but it can't be
 turned back on without reinstalling Windows.
 
-## Mac (Apple Silicon), experimental
+## Mac, experimental
 
-**Experimental: unsigned, not yet tested on a real Mac — reports welcome.**
-Each release also has `Ringkeeper_<version>_aarch64.dmg` for Macs with Apple
-Silicon (M1 or newer). There's no build for Intel Macs.
+**Experimental and unsigned: reports welcome.**
+Each release also has two Mac downloads, for macOS 12 or newer. To see which
+is yours, open the Apple menu › **About This Mac**:
+
+- **Chip: Apple M1** or newer: `Ringkeeper_<version>_aarch64.dmg`
+- **Processor: Intel**: `Ringkeeper_<version>_x64.dmg`
 
 1. Download the `.dmg` from the
    [latest release](https://github.com/alexyushkin/ringkeeper-releases/releases/latest),
    open it, and drag **Ringkeeper** into **Applications**.
-2. Open Ringkeeper from Applications. macOS says it can't check the app for
-   malware, because it isn't signed yet. Click **Done**.
-3. Open **System Settings › Privacy & Security**, scroll down to **Security**,
-   and next to "Ringkeeper was blocked…" click **Open Anyway**. Confirm with
-   your password or Touch ID, then click **Open**. macOS remembers this, so you
-   only do it once.
+2. **Don't double-click it the first time:** the app isn't signed yet, so macOS
+   won't open it that way. In Finder, choose **Go › Applications** from the menu
+   bar, right-click **Ringkeeper** (or hold Control and click it), and choose
+   **Open**.
+3. macOS asks if you're sure. Click **Open**. It remembers this, so you only do
+   it once.
+
+If that message has no **Open** button (macOS 15 or newer), click **Done**. Then
+open **System Settings › Privacy & Security**, scroll down to **Security**, and
+next to "Ringkeeper was blocked…" click **Open Anyway**. Confirm with your
+password or Touch ID, then click **Open**.
 
 If macOS instead says the app "is damaged and can't be opened", that's the same
 missing signature. In Terminal, run
